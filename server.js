@@ -17,7 +17,7 @@ const db = new MoviesDB();
 require("dotenv").config();
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
-const url = process.env.MONGODB_CONN_STRING;
+
 app.use(express.json());
 
 app.use(cors());
@@ -75,7 +75,7 @@ app.delete("/api/movies/:id", (req, res) => {
   res.status(204).end();
 });
 
-db.initialize(url)
+db.initialize(process.env.MONGODB_CONN_STRING)
   .then(() => {
     app.listen(HTTP_PORT, () => {
       console.log(`server listening on: ${HTTP_PORT}`);
