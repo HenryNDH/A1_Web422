@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Anh Truong Huynh",
+  "author": "Nguyen Duy Hoang",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
