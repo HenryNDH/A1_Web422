@@ -5,7 +5,7 @@
  *  (including web sites) or distributed to other students.
  *
  *  Name: Nguyen Duy Hoang Student ID: 108397217 Date: _Jan 20 2023_
- *  Cyclic Link: ____https://odd-plum-indri-coat.cyclic.app____
+ *  Cyclic Link: https://odd-plum-indri-coat.cyclic.app
  *
  ********************************************************************************/
 
@@ -59,7 +59,7 @@ app.get("/api/movies/:id", (req, res) => {
     });
 });
 
-
+//AC
 app.put("/api/movies/:id", (req, res) => {
   db.updateMovieById(req.body, req.params.id)
     .then((movie) => {
@@ -70,6 +70,7 @@ app.put("/api/movies/:id", (req, res) => {
     });
 });
 
+//AC
 app.delete("/api/movies/:id", (req, res) => {
   db.deleteMovieById(req.params.id);
   res.status(204).end();
